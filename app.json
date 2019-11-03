@@ -1,0 +1,32 @@
+{
+  "expo": {
+    "name": "Expo Audio/Video",
+    "description": "audio and video with expo",
+    "scheme": "expoaudiovideo",
+    "slug": "expoaudiovideo",
+    "privacy": "public",
+    "sdkVersion": "35.0.0",
+    "version": "0.0.1",
+    "platforms": ["android", "ios"],
+    "githubUrl": "https://github.com/calebnance/expo-audio-video",
+    "orientation": "portrait",
+    "primaryColor": "#ffffff",
+    "icon": "src/assets/icon.png",
+    "splash": {
+      "backgroundColor": "#ffffff",
+      "image": "src/assets/splash.png",
+      "resizeMode": "contain"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": ["**/*"],
+    "android": {
+      "versionCode": 1
+    },
+    "ios": {
+      "buildNumber": "0.0.1",
+      "supportsTablet": true
+    }
+  }
+}
