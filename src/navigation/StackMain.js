@@ -3,12 +3,14 @@ import { createStackNavigator } from 'react-navigation-stack';
 
 // screens
 import Home from '../screens/Home';
+import VideoBackground from '../screens/VideoBackground';
 
 // Home Stack
 // /////////////////////////////////////////////////////////////////////////////
 const StackMain = createStackNavigator(
   {
-    Home
+    Home,
+    VideoBackground
   },
   {
     navigationOptions: {
