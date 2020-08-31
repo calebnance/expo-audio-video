@@ -6,9 +6,10 @@
 
 ### Out of the Box
 
-- Expo SDK 35
+- Expo SDK 36
 - React Navigation v4
 - Prettier
+- PropTypes
 
 ## Table of Contents
 
@@ -41,5 +42,6 @@ Run Project Locally: `expo start` or `yarn dev`
 
 ### version 0.0.1 (current)
 
+- upgraded to [Expo SDK 36](https://blog.expo.io/expo-sdk-36-is-now-available-b91897b437fe)
 - started with [Expo SDK 35](https://blog.expo.io/expo-sdk-35-is-now-available-beee0dfafbf4)
 - started with [React Navigation v4](https://reactnavigation.org/docs/en/getting-started.html)
