@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { Asset } from 'expo-asset';
 import { Video } from 'expo-av';
 import { colors, device, fonts, gStyle } from '../constants';
@@ -41,9 +41,14 @@ class VideoBackground extends React.Component {
             style={{ height: device.height, width: device.width }}
           />
         )}
-        <View style={styles.containerText}>
+
+        <TouchableOpacity
+          activeOpacity={gStyle.activeOpacity}
+          onPress={() => null}
+          style={styles.containerText}
+        >
           <Text style={styles.text}>Change background video</Text>
-        </View>
+        </TouchableOpacity>
       </View>
     );
   }
