@@ -29,7 +29,6 @@ export default {
     elevation: 0
   },
   navHeaderTitleStyle: {
-    flex: 1,
     fontFamily: fonts.regular,
     textAlign: 'center'
   },

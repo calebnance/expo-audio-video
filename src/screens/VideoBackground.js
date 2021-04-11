@@ -8,8 +8,8 @@ import { colors, device, fonts, gStyle } from '../constants';
 const videoSource = require('../assets/videos/flowers.mp4');
 
 class VideoBackground extends React.Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
 
     this.state = {
       videoLoaded: false
@@ -53,11 +53,6 @@ class VideoBackground extends React.Component {
     );
   }
 }
-
-VideoBackground.navigationOptions = {
-  headerTitleStyle: gStyle.navHeaderTitleStyle,
-  title: 'Video Background'
-};
 
 const styles = StyleSheet.create({
   container: {

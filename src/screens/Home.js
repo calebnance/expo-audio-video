@@ -33,11 +33,6 @@ const Home = ({ navigation }) => (
   </ScrollView>
 );
 
-Home.navigationOptions = {
-  headerTitleStyle: gStyle.navHeaderTitleStyle,
-  title: 'Home'
-};
-
 Home.propTypes = {
   // required
   navigation: PropTypes.object.isRequired
