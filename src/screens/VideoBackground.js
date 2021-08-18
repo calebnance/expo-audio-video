@@ -27,6 +27,7 @@ class VideoBackground extends React.Component {
   }
 
   render() {
+    const { navigation } = this.props;
     const { videoLoaded } = this.state;
 
     return (
@@ -44,7 +45,7 @@ class VideoBackground extends React.Component {
 
         <TouchableOpacity
           activeOpacity={gStyle.activeOpacity}
-          onPress={() => null}
+          onPress={() => navigation.navigate('ChangeVideoBackground')}
           style={styles.containerText}
         >
           <Text style={styles.text}>Change background video</Text>

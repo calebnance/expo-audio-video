@@ -41,6 +41,8 @@ export default {
   mB8: { marginBottom: 8 },
   mB16: { marginBottom: 16 },
 
+  mH16: { marginHorizontal: 16 },
+
   mL8: { marginLeft: 8 },
   mL16: { marginLeft: 16 },
 

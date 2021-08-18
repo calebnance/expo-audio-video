@@ -3,7 +3,8 @@ import { StatusBar } from 'react-native';
 import AppLoading from 'expo-app-loading';
 import { func } from './src/constants';
 
-import StackMain from './src/navigation/StackMain';
+// root stack navigation
+import StackRoot from './src/navigation/StackRoot';
 
 export default class App extends React.Component {
   constructor() {
@@ -32,7 +33,7 @@ export default class App extends React.Component {
     return (
       <React.Fragment>
         <StatusBar barStyle="dark-content" />
-        <StackMain />
+        <StackRoot />
       </React.Fragment>
     );
   }
