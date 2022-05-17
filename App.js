@@ -1,40 +1,54 @@
 import React from 'react';
 import { StatusBar } from 'react-native';
-import AppLoading from 'expo-app-loading';
+import * as SplashScreen from 'expo-splash-screen';
 import { func } from './src/constants';
 
 // root stack navigation
 import StackRoot from './src/navigation/StackRoot';
 
-export default class App extends React.Component {
-  constructor() {
-    super();
+const App = () => {
+  const [isLoading, setIsLoading] = React.useState(true);
 
-    this.state = {
-      isLoading: true
-    };
-  }
+  React.useEffect(() => {
+    async function prepare() {
+      try {
+        // keeps the splash screen visible while assets are cached
+        await SplashScreen.preventAutoHideAsync();
 
-  render() {
-    const { isLoading } = this.state;
-
-    if (isLoading) {
-      return (
-        <AppLoading
-          onError={() => {
-            // console.warn
-          }}
-          onFinish={() => this.setState({ isLoading: false })}
-          startAsync={func.loadAssetsAsync}
-        />
-      );
+        // pre-load/cache assets: images, fonts, and videos
+        await func.loadAssetsAsync();
+      } catch (e) {
+        // console.warn(e);
+      } finally {
+        // loading is complete
+        setIsLoading(false);
+      }
     }
 
-    return (
-      <React.Fragment>
-        <StatusBar barStyle="dark-content" />
-        <StackRoot />
-      </React.Fragment>
-    );
+    prepare();
+  }, []);
+
+  React.useEffect(() => {
+    // when loading is complete
+    if (isLoading === false) {
+      // hide splash function
+      const hideSplash = async () => SplashScreen.hideAsync();
+
+      // hide splash screen to show app
+      hideSplash();
+    }
+  }, [isLoading]);
+
+  if (isLoading) {
+    return null;
   }
-}
+
+  return (
+    <React.Fragment>
+      <StatusBar barStyle="dark-content" />
+      <StackRoot />
+    </React.Fragment>
+  );
+};
+
+export default App;

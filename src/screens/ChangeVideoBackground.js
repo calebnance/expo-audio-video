@@ -8,7 +8,6 @@ import {
   View
 } from 'react-native';
 import { Asset } from 'expo-asset';
-// import { Video } from 'expo-av';
 import * as VideoThumbnails from 'expo-video-thumbnails';
 import { colors, device, fonts, gStyle } from '../constants';
 
@@ -49,19 +48,20 @@ const ChangeVideoBackground = () => {
           };
         })
       );
+
       setDataLoaded(true);
       setData(returnedData);
     } catch (e) {
-      console.warn(e);
+      // console.warn(e);
     }
   };
 
   React.useEffect(() => {
-    console.log('useEffect');
+    // no thumbnails yet?
     if (dataLoaded === false) {
       generateThumbnail();
     }
-  });
+  }, [dataLoaded]);
 
   return (
     <ScrollView
