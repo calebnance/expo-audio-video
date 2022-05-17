@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { Asset } from 'expo-asset';
 import { Video } from 'expo-av';
@@ -54,6 +55,11 @@ class VideoBackground extends React.Component {
     );
   }
 }
+
+VideoBackground.propTypes = {
+  // required
+  navigation: PropTypes.object.isRequired
+};
 
 const styles = StyleSheet.create({
   container: {
